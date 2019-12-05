@@ -1,7 +1,7 @@
 // Redux Toolkit
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
+export const initialState = {
   closed: false,
   locked: false
 };
