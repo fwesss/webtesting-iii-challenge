@@ -12,13 +12,28 @@ describe('Buttons', () => {
     getByText(/open|close/i);
   });
 
-  it('should change buttons text to reflect the state the door will be in if clicked', () => {
+  it('should change buttons text to reflect the state the gate will be in if clicked', () => {
     const { getByText } = renderWithRedux(<Controls />);
 
-    const openButton = getByText(/open gate|close gate/i);
+    const openButton = getByText(/open|close/i);
     const openButtonText = openButton.textContent;
     fireEvent.click(openButton);
     expect(openButton.textContent).not.toBe(openButtonText);
+  });
+
+  it('should change buttons text to reflect the state the lock will be in if clicked', () => {
+    const { getByText } = renderWithRedux(<Controls />, {
+      initialState: {
+        toggleGate: {
+          closed: true
+        }
+      }
+    });
+
+    const lockButton = getByText(/lock|unlock/i);
+    const lockButtonText = lockButton.textContent;
+    fireEvent.click(lockButton);
+    expect(lockButton.textContent).not.toBe(lockButtonText);
   });
 
   it('should have a disabled closed toggle button if gate is locked', () => {
@@ -38,7 +53,7 @@ describe('Buttons', () => {
     const { getByText } = renderWithRedux(<Controls />, {
       initialState: {
         toggleGate: {
-          open: true
+          closed: false
         }
       }
     });
