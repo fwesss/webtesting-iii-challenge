@@ -1,9 +1,8 @@
 body {
   margin: 0;
   padding: 1rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,10 +10,10 @@ body {
 .panel {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem;
-  border: 1px solid silver;
   max-width: 200px;
   margin: 0 auto;
+  padding: 0.5rem;
+  border: 1px solid silver;
 }
 
 .display {
@@ -22,13 +21,13 @@ body {
 }
 
 .led {
-  background-color: #444;
-  border-right: 0.5px solid white;
-  color: white;
   display: flex;
   flex: 1;
-  padding: 4px 8px;
   justify-content: center;
+  padding: 4px 8px;
+  color: white;
+  background-color: #444;
+  border-right: 0.5px solid white;
 }
 
 .red-led {
@@ -42,6 +41,6 @@ body {
 .toggle-btn {
   flex: 1;
   padding: 4px 8px;
-  font-size: 1rem;
   font-weight: 300;
+  font-size: 1rem;
 }

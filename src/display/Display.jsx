@@ -1,6 +1,9 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-const Display = ({ closed, locked }) => {
+const Display = () => {
+  const { closed, locked } = useSelector(state => state.toggleGate);
+
   const closedClass = `led ${closed ? 'red-led' : 'green-led'}`;
   const lockedClass = `led ${locked ? 'red-led' : 'green-led'}`;
 
@@ -10,11 +13,6 @@ const Display = ({ closed, locked }) => {
       <div className={closedClass}>{closed ? 'Closed' : 'Open'}</div>
     </div>
   );
-};
-
-Display.defaultProps = {
-  closed: false,
-  locked: false,
 };
 
 export default Display;
