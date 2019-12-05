@@ -39,7 +39,8 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "optimize-regex/optimize-regex": "warn",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "jest/expect-expect": "off"
   },
   "plugins": [
     "import",
